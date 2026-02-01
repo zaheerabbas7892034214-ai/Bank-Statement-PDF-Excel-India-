@@ -1,0 +1,198 @@
+Bank Statement PDF to Excel (India) - Complete File List
+=========================================================
+
+ROOT LEVEL
+----------
+├── .gitignore                          # Git ignore rules
+├── README.md                           # Main project documentation
+├── PROJECT_SUMMARY.md                  # Implementation summary
+├── PACKAGE_NAME_CHANGE.md             # Package name change guide
+├── PLAY_STORE_SETUP.md                # Play Store deployment guide
+├── build.gradle.kts                   # Root Gradle build file
+├── settings.gradle.kts                # Gradle settings
+├── gradle.properties                  # Gradle configuration
+├── gradlew                            # Gradle wrapper script (Unix)
+└── gradle/
+    ├── libs.versions.toml             # Version catalog
+    └── wrapper/
+        └── gradle-wrapper.properties  # Wrapper configuration
+
+APP MODULE
+----------
+app/
+├── build.gradle.kts                   # App module build file
+├── proguard-rules.pro                 # ProGuard configuration
+└── src/main/
+    ├── AndroidManifest.xml            # App manifest
+    ├── java/com/bankstatement/pdftoexcel/
+    │   ├── BankStatementApp.kt        # Application class
+    │   ├── data/
+    │   │   └── BankTransaction.kt     # Transaction data model
+    │   ├── billing/
+    │   │   └── BillingManager.kt      # Google Play Billing
+    │   ├── ui/
+    │   │   ├── home/
+    │   │   │   └── HomeActivity.kt    # Home screen
+    │   │   ├── preview/
+    │   │   │   ├── PreviewActivity.kt # Preview screen
+    │   │   │   └── TransactionAdapter.kt # RecyclerView adapter
+    │   │   ├── export/
+    │   │   │   └── ExportActivity.kt  # Export screen
+    │   │   └── settings/
+    │   │       └── SettingsActivity.kt # Settings screen
+    │   └── utils/
+    │       ├── PdfProcessor.kt        # PDF processing
+    │       ├── OcrExtractor.kt        # ML Kit OCR
+    │       ├── CsvExporter.kt         # CSV export
+    │       ├── ExcelExporter.kt       # Excel export
+    │       └── PreferencesManager.kt  # SharedPreferences
+    └── res/
+        ├── drawable/
+        │   ├── ic_arrow_right.xml     # Arrow icon
+        │   ├── ic_back.xml            # Back navigation icon
+        │   ├── ic_convert.xml         # Convert icon
+        │   ├── ic_csv.xml             # CSV file icon
+        │   ├── ic_excel.xml           # Excel file icon
+        │   ├── ic_export.xml          # Export icon
+        │   ├── ic_file.xml            # File icon
+        │   ├── ic_info.xml            # Info icon
+        │   ├── ic_launcher.xml        # App launcher icon
+        │   ├── ic_launcher_round.xml  # Round launcher icon
+        │   ├── ic_pdf_excel.xml       # PDF to Excel icon
+        │   ├── ic_policy.xml          # Policy icon
+        │   ├── ic_premium.xml         # Premium icon
+        │   ├── ic_restore.xml         # Restore icon
+        │   ├── ic_settings.xml        # Settings icon
+        │   └── ic_share.xml           # Share icon
+        ├── layout/
+        │   ├── activity_home.xml      # Home screen layout
+        │   ├── activity_preview.xml   # Preview screen layout
+        │   ├── activity_export.xml    # Export screen layout
+        │   ├── activity_settings.xml  # Settings screen layout
+        │   └── item_transaction.xml   # Transaction item layout
+        ├── menu/
+        │   └── menu_home.xml          # Home menu
+        ├── values/
+        │   ├── colors.xml             # Color definitions
+        │   ├── dimens.xml             # Dimension resources
+        │   ├── strings.xml            # String resources
+        │   └── themes.xml             # Light theme
+        └── values-night/
+            └── themes.xml             # Dark theme
+
+FILE COUNT SUMMARY
+------------------
+Kotlin source files:    13
+XML layouts:             5
+XML drawables:          16
+XML values:              5
+Gradle files:            5
+Documentation files:     4
+Configuration files:     3
+
+Total files:            51
+
+FEATURES IMPLEMENTED
+--------------------
+✓ MVVM Architecture
+✓ Material 3 Design
+✓ PDF Processing (Text + OCR)
+✓ Transaction Parsing
+✓ CSV Export
+✓ Excel Export
+✓ Google Play Billing
+✓ Premium Unlock
+✓ Dark/Light Themes
+✓ Storage Access Framework
+✓ File Sharing
+✓ Settings Screen
+✓ Error Handling
+✓ Progress Indicators
+
+DEPENDENCIES
+------------
+- AndroidX Core KTX 1.12.0
+- AndroidX AppCompat 1.6.1
+- Material Components 1.11.0
+- ConstraintLayout 2.1.4
+- Lifecycle ViewModel 2.7.0
+- Lifecycle LiveData 2.7.0
+- Activity KTX 1.8.2
+- ML Kit Text Recognition 16.0.0
+- Google Play Billing 6.1.0
+- Apache POI 5.2.5
+- Apache POI OOXML 5.2.5
+
+GRADLE CONFIGURATION
+--------------------
+- Gradle Version: 8.2
+- AGP Version: 8.2.0
+- Kotlin Version: 1.9.20
+- Min SDK: 24 (Android 7.0)
+- Target SDK: 34 (Android 14)
+- Java Version: 17
+- Build Tool: Kotlin DSL
+
+KEY FEATURES
+------------
+1. PDF Input via Storage Access Framework
+2. Text-based PDF extraction using PdfRenderer
+3. Scanned PDF OCR using ML Kit
+4. Transaction parsing for Indian banks
+5. CSV export with proper escaping
+6. Excel export with Apache POI
+7. Google Play Billing integration
+8. Premium unlock (₹299)
+9. Free preview (first 10 rows)
+10. Blur effect for locked content
+11. Restore purchases
+12. File sharing
+13. Material 3 UI
+14. Dark/Light themes
+15. Settings screen
+
+CUSTOMIZATION NEEDED
+--------------------
+Before deployment:
+1. Change package name (see PACKAGE_NAME_CHANGE.md)
+2. Update privacy policy URL in strings.xml
+3. Create app in Google Play Console
+4. Configure in-app product (premium_unlock)
+5. Generate signed release build
+6. Prepare store graphics (icon, screenshots, feature graphic)
+7. Complete store listing
+8. Test billing in internal testing track
+
+READY FOR
+----------
+✓ Android Studio Giraffe+
+✓ Import as existing project
+✓ Gradle sync
+✓ Build and run
+✓ Customization
+✓ Production deployment
+
+BUILD COMMANDS
+--------------
+Debug build:    ./gradlew assembleDebug
+Release build:  ./gradlew assembleRelease
+Clean:          ./gradlew clean
+Install:        ./gradlew installDebug
+
+NEXT STEPS
+----------
+1. Open project in Android Studio
+2. Sync Gradle files
+3. Review code and customize
+4. Test on device/emulator
+5. Change package name
+6. Configure Play Store
+7. Generate signed build
+8. Deploy to Play Store
+
+For detailed instructions, see:
+- README.md - General overview
+- PACKAGE_NAME_CHANGE.md - Package customization
+- PLAY_STORE_SETUP.md - Deployment guide
+- PROJECT_SUMMARY.md - Implementation details
+
